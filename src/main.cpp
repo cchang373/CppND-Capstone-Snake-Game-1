@@ -16,7 +16,8 @@ int main() {
   Game game(kGridWidth, kGridHeight);
   game.Run(controller, renderer, kMsPerFrame);
   std::cout << "Game has terminated successfully!\n";
-  std::cout << "Score: " << game.GetScore() << "\n";
-  std::cout << "Size: " << game.GetSize() << "\n";
+  int score = game.GetScore()[0], score2 = game.GetScore()[1];
+  std::cout << "Score: " << score << "\n" << "Score2: " << score2 << "\n";
+  //std::cout << "Size: " << game.GetSize() << "\n";
   return 0;
 }
