@@ -1,6 +1,7 @@
 #include "snake.h"
 #include <cmath>
 #include <iostream>
+#include <string>
 
 void Snake::Update() {
   SDL_Point prev_cell{
@@ -77,3 +78,5 @@ bool Snake::SnakeCell(int x, int y) {
   }
   return false;
 }
+
+std::string Snake::GetName() {return snake_name;}

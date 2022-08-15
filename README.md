@@ -4,9 +4,25 @@ This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree P
 
 <img src="snake_game.gif"/>
 
-The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
+## New Features (competition between 2 players)
+* Another snake and another food are added to the game
+* One snake is controlled by the arrow, the other is controlled by w(up), a(left), s(down), and d(right)
+* Once one of the snakes has eaten the food, both food would be re-generated and game winner would be the player with higher score
 
-In this project, you can build your own C++ application or extend this Snake game, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features.
+## RUBRIC
+### LOOPS, FUNCTIONS, I/O
+* Allow user to enter player name at the beginning of the game
+* The players' names and scores are displayed on top of the game window and the winner is shown after the termination of the game
+
+### OOP
+* Public / private functions needed are added accordingly (e.g. private variable `snake_name` and public function `GetName()` are added into class `Snake`
+* Both snakes are initialized and implemented
+
+### MEMORY MANAGEMENT
+* Both snakes are passed by references in `HandleInput()` and `ChangeDirection()` in class `Controller`
+
+### CONCURRENCY
+* A lock is used to handle the input from the user in `Controller::HandleInput()`
 
 ## Dependencies for Running Locally
 * cmake >= 3.7

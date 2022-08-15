@@ -1,5 +1,6 @@
 #include "controller.h"
 #include <iostream>
+#include <mutex>
 #include "SDL.h"
 #include "snake.h"
 
@@ -13,6 +14,8 @@ void Controller::ChangeDirection(Snake &snake, Snake::Direction input,
 
 void Controller::HandleInput(bool &running, Snake &snake, Snake &snake2) const
 {
+  std::mutex mtx;
+  mtx.lock();
   SDL_Event e;
   while (SDL_PollEvent(&e))
   {
@@ -66,4 +69,5 @@ void Controller::HandleInput(bool &running, Snake &snake, Snake &snake2) const
       }
     }
   }
+  mtx.unlock();
 }
